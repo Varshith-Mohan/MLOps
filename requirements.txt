@@ -26,3 +26,6 @@ python -m pip install "pymongo[srv]"
 
 v1BN1oVJjOKTerHB mongodb password
 varshithmohang_db_user userid
+
+set: export MONGODB_URL="mongodb+srv://varshithmohang_db_user:v1BN1oVJjOKTerHB"
+check: echo $MONGODB_URL
