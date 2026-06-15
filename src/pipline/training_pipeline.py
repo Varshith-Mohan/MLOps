@@ -16,23 +16,23 @@ from src.entity.config_entity import (DataIngestionConfig,
                                           ModelEvaluationConfig,
                                           ModelPusherConfig)
                                           
-from src.entity.artifact_entity import (DataIngestionArtifact)
-                                            # DataValidationArtifact,
-                                            # DataTransformationArtifact,
-                                            # ModelTrainerArtifact,
-                                            # ModelEvaluationArtifact,
-                                            # ModelPusherArtifact)
+from src.entity.artifact_entity import (DataIngestionArtifact,
+                                            DataValidationArtifact,
+                                            DataTransformationArtifact,
+                                            ModelTrainerArtifact,
+                                            ModelEvaluationArtifact,
+                                            ModelPusherArtifact)
 
 
 
 class TrainPipeline:
     def __init__(self):
         self.data_ingestion_config = DataIngestionConfig()
-        # self.data_validation_config = DataValidationConfig()
-        # self.data_transformation_config = DataTransformationConfig()
-        # self.model_trainer_config = ModelTrainerConfig()
-        # self.model_evaluation_config = ModelEvaluationConfig()
-        # self.model_pusher_config = ModelPusherConfig()
+        self.data_validation_config = DataValidationConfig()
+        self.data_transformation_config = DataTransformationConfig()
+        self.model_trainer_config = ModelTrainerConfig()
+        self.model_evaluation_config = ModelEvaluationConfig()
+        self.model_pusher_config = ModelPusherConfig()
 
 
     
@@ -73,7 +73,7 @@ class TrainPipeline:
             raise MyException(e, sys)
         
         
-'''     
+  
         
     def start_data_validation(self, data_ingestion_artifact: DataIngestionArtifact) -> DataValidationArtifact:
         """
@@ -95,6 +95,7 @@ class TrainPipeline:
         except Exception as e:
             raise MyException(e, sys) from e
         
+'''   
     def start_data_transformation(self, data_ingestion_artifact: DataIngestionArtifact, data_validation_artifact: DataValidationArtifact) -> DataTransformationArtifact:
         """
         This method of TrainPipeline class is responsible for starting data transformation component
