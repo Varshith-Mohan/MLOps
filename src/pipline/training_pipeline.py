@@ -9,12 +9,12 @@ from src.components.data_ingestion import DataIngestion
 # from src.components.model_evaluation import ModelEvaluation
 # from src.components.model_pusher import ModelPusher
 
-from src.entity.config_entity import (DataIngestionConfig)
-                                        #   DataValidationConfig,
-                                        #   DataTransformationConfig,
-                                        #   ModelTrainerConfig,
-                                        #   ModelEvaluationConfig,
-                                        #   ModelPusherConfig)
+from src.entity.config_entity import (DataIngestionConfig,
+                                          DataValidationConfig,
+                                          DataTransformationConfig,
+                                          ModelTrainerConfig,
+                                          ModelEvaluationConfig,
+                                          ModelPusherConfig)
                                           
 from src.entity.artifact_entity import (DataIngestionArtifact)
                                             # DataValidationArtifact,
